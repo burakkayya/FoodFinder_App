@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ymk"
+   >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/ingredientText"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="153dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:foregroundTint="@color/white"
+            android:hint="Type ingredient"
+            android:inputType="textPersonName"
+            android:textColor="#F2FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/ingredientsList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="20dp"
+            android:autoText="false"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="ADD"
+            app:icon="@android:drawable/arrow_up_float"
+            app:iconTintMode="add"
+            app:layout_constraintEnd_toStartOf="@+id/findButton"
+            app:layout_constraintHorizontal_bias="0.673"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientText" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="144dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="72dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="DELETE"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientText" />
+
+        <ListView
+            android:id="@+id/ingredientsList"
+            android:layout_width="379dp"
+            android:layout_height="292dp"
+            android:textFilterEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/findButton"
+            android:layout_width="130dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="FIND FOOD"
+            app:icon="@android:drawable/ic_menu_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.775"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
